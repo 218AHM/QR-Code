@@ -16,14 +16,14 @@ class QRCodeGenerator:
         self.master = master
         self.master.title("QR Code Generator")
         self.master.geometry("450x230+700+200")
-        self.master.iconbitmap("D:\Programing\python\QR code\img\qrcode.ico")
+        self.master.iconbitmap("img\qrcode.ico")
         self.master.resizable(False, False)
 
         self.f = tk.Frame(self.master, width=450, height=230, bg="#4D677A")
         self.f.place(x=0, y=0)
 
         self.iconback = PhotoImage(
-            file="D:\Programing\python\QR code\img\iconBack.png")
+            file="img\iconBack.png")
         self.back_icon = self.iconback.subsample(5, 5)
         self.back_button = tk.Button(self.master, image=self.back_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.go_back)
@@ -38,7 +38,7 @@ class QRCodeGenerator:
         self.link_entry.place(x=85, y=70)
 
         self.iconpaste = PhotoImage(
-            file="D:\Programing\python\QR code\img\iconPaste.png")
+            file="img\iconPaste.png")
         self.paste_icon = self.iconpaste.subsample(15, 15)
         self.paste_button = tk.Button(self.master, image=self.paste_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.paste)
@@ -122,20 +122,20 @@ class QRCodeReader:
         self.master = master
         self.master.title("QR Code Reader")
         self.master.geometry("450x230+700+200")
-        self.master.iconbitmap("D:\Programing\python\QR code\img\qrcode.ico")
+        self.master.iconbitmap("img\qrcode.ico")
         self.master.resizable(False, False)
 
         self.f3 = tk.Frame(self.master, width=450, height=230, bg="#4D677A")
         self.f3.place(x=0, y=0)
 
         self.iconback = PhotoImage(
-            file="D:\Programing\python\QR code\img\iconBack.png")
+            file="img\iconBack.png")
         self.back_icon = self.iconback.subsample(5, 5)
         self.back_button = tk.Button(self.master, image=self.back_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.go_back)
         self.back_button.place(x=2, y=2)
 
-        self.iconbrowse = PhotoImage(file = "D:\Programing\python\QR code\img\iconBrowse.png")
+        self.iconbrowse = PhotoImage(file = "img\iconBrowse.png")
         self.browse_icon = self.iconbrowse.subsample(3, 3)
         self.browse_button = Button(self.f3, text = ' Browse', image = self.browse_icon, compound = LEFT, bg="#4D677A", relief="flat", fg="White", activebackground="#4D677A", activeforeground="White", command=self.browse_file)
         self.browse_button.place(x=190, y=20)
@@ -149,7 +149,7 @@ class QRCodeReader:
         self.qr_data_entry.place(x=95, y=95)
 
         self.iconcopy = PhotoImage(
-            file="D:\Programing\python\QR code\img\iconCopy.png")
+            file="img\iconCopy.png")
         self.copy_icon = self.iconcopy.subsample(12, 12)
         self.copy_button = tk.Button(self.master, image=self.copy_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.copy)
@@ -216,7 +216,7 @@ class MainWindow:
         self.master = master
         self.master.title("QR Code Tool")
         self.master.geometry("360x150+700+200")
-        self.master.iconbitmap("D:\Programing\python\QR code\img\qrcode.ico")
+        self.master.iconbitmap("img\qrcode.ico")
         self.master.resizable(False, False)
 
         self.f1 = tk.Frame(self.master, width=360, height=150, bg="#4D677A")
@@ -247,4 +247,3 @@ if __name__ == '__main__':
     root = tk.Tk()
     MainWindow(root)
     root.mainloop()
-
